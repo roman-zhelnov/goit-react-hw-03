@@ -1,4 +1,4 @@
-import s from "./Contsct.module.css";
+import s from "./Contact.module.css";
 import { TbPhone } from "react-icons/tb";
 import { FaUserLarge } from "react-icons/fa6";
 
