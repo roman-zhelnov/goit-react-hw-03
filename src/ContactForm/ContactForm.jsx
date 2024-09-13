@@ -43,12 +43,12 @@ const ContactForm = ({ onAdd }) => {
           <label className={s.label}>
             <span>Name</span>
             <Field name="name" className={s.input} />
-            <ErrorMessage name="name" className={s.error} />
+            <ErrorMessage name="name" component="span" className={s.error} />
           </label>
           <label className={s.label}>
             <span>Number</span>
             <Field name="number" className={s.input} />
-            <ErrorMessage name="number" className={s.error} />
+            <ErrorMessage name="number" component="span" className={s.error} />
           </label>
           <button type="submit" className={s.btn}>
             Add contact
