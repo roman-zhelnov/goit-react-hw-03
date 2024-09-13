@@ -1,23 +1,11 @@
-import { useState } from "react";
 import s from "./ContactList.module.css";
-import contactsDate from "../contacts.json";
 import Contact from "../Contact/Contact";
 
-const ContactList = () => {
-  const [contact, setContact] = useState(contactsDate);
-
-  const handelDeleteContact = (id) => {
-    setContact((prev) => prev.filter((item) => item.id !== id));
-  };
-
+const ContactList = ({ onDelete, contacts }) => {
   return (
     <ul className={s.contactList}>
-      {contact.map((item) => (
-        <Contact
-          key={item.id}
-          {...item}
-          handelDeleteContact={handelDeleteContact}
-        />
+      {contacts.map((item) => (
+        <Contact key={item.id} {...item} onDelete={onDelete} />
       ))}
     </ul>
   );

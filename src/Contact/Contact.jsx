@@ -2,7 +2,7 @@ import s from "./Contsct.module.css";
 import { TbPhone } from "react-icons/tb";
 import { FaUserLarge } from "react-icons/fa6";
 
-const Contact = ({ id, name, number, handelDeleteContact }) => {
+const Contact = ({ id, name, number, onDelete }) => {
   return (
     <li className={s.contact}>
       <div className={s.user}>
@@ -15,7 +15,7 @@ const Contact = ({ id, name, number, handelDeleteContact }) => {
           {number}
         </p>
       </div>
-      <button onClick={() => handelDeleteContact(id)}>Delete</button>
+      <button onClick={() => onDelete(id)}>Delete</button>
     </li>
   );
 };
